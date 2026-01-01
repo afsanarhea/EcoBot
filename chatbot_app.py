@@ -85,7 +85,6 @@ if 'bot' not in st.session_state:
             st.stop()
 
 if 'llm_setup' not in st.session_state:
-    st.session_state.bot.setup_qa_chain()
     st.session_state.llm_setup = True
 
 st.title("Ecobot - Your Greenhouse Assistant")
