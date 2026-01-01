@@ -27,7 +27,7 @@ EcoBot uses Retrieval-Augmented Generation to deliver accurate plant care advice
 
 Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/EcoBot.git
+git clone https://github.com/afsanarhea/EcoBot.git
 cd EcoBot
 ```
 
