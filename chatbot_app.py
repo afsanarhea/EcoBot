@@ -72,6 +72,7 @@ if 'bot' not in st.session_state:
             bot = EcobotRAG()
             if os.path.exists("vectorstore/faiss_index"):
                 bot.load_vector_store()
+                bot.setup_qa_chain()
                 st.session_state.bot = bot
                 st.session_state.bot_loaded = True
             else:
