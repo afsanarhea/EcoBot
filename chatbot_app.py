@@ -1,7 +1,17 @@
 import os
-if not os.path.exists("vectorstore"):
+
+# Auto-create vectorstore if not exists
+if not os.path.exists("vectorstore/faiss_index"):
     print("Creating knowledge base... Please wait.")
-    exec(open("create_knowledge_base.py").read())
+    from ecobot_rag import EcobotRAG
+    
+    bot = EcobotRAG()
+    documents = bot.load_documents()
+    chunks = bot.split_documents(documents)
+    bot.create_embeddings()
+    bot.create_vector_store(chunks)
+    bot.save_vector_store()
+    print("Knowledge base created!")
 
 import streamlit as st
 from ecobot_rag import EcobotRAG
