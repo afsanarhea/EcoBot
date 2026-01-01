@@ -1,3 +1,8 @@
+import os
+if not os.path.exists("vectorstore"):
+    print("Creating knowledge base... Please wait.")
+    exec(open("create_knowledge_base.py").read())
+
 import streamlit as st
 from ecobot_rag import EcobotRAG
 import os
