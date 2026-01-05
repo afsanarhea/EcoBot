@@ -85,3 +85,6 @@ EcoBot/
 ## How It Works
 
 Documents in the data folder are split into chunks and converted to embeddings. FAISS indexes these embeddings for fast retrieval. When you ask a question, the system finds relevant document chunks and sends them to GROQ Llama 3.3 70B to generate a natural language response.
+
+## Upcoming Feature
+- Advanced RAG system (coming soon)
