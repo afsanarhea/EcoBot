@@ -88,3 +88,7 @@ Documents in the data folder are split into chunks and converted to embeddings. 
 
 ## Upcoming Feature
 - Advanced RAG system (coming soon)
+
+## Screenshot
+
+![EcoBot UI](ecobot_demo.png) 
