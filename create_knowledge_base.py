@@ -1,21 +1,13 @@
-"""
-Create Knowledge Base Documents for Ecobot RAG System
-Run this script to generate plant care documents
-"""
-
 import os
 from pathlib import Path
 
 def create_knowledge_base():
-    """Create comprehensive plant care documents"""
     
-    # Create data directory
     data_dir = Path("data")
     data_dir.mkdir(exist_ok=True)
     
     print("Creating knowledge base documents...")
 
-# Document 1: Snake Plant Guide
     snake_plant = """Snake Plant (Sansevieria) Care Guide
 
 
@@ -332,7 +324,6 @@ Common Causes of Plant Damage in Greenhouses:
 - Replace with healthy plant only after cleaning are
 """
 
-# Write all documents
     docs = {
         "snake_plant_guide.txt": snake_plant,
         "spider_plant_guide.txt": spider_plant,
@@ -347,7 +338,7 @@ Common Causes of Plant Damage in Greenhouses:
             f.write(content)
         print(f"✓ Created: {filename}")
     
-    print(f"\n✓ All {len(docs)} knowledge base documents created in 'data' folder!")
+    print(f"\n All {len(docs)} knowledge base documents created in 'data' folder!")
     
 if __name__ == "__main__":
     create_knowledge_base()
