@@ -8,6 +8,35 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Arize Phoenix Tracing
+try:
+    from phoenix.otel import register
+    from openinference.instrumentation.langchain import LangChainInstrumentor
+    
+    tracer_provider = register(
+        project_name="ecobot-observability",
+        auto_instrument=True,
+    )
+    print("Arize Phoenix connected")
+except Exception as e:
+    print(f"Phoenix setup skipped: {e}")
+
+# Langfuse Tracing
+langfuse_handler = None
+try:
+    from langfuse import Langfuse
+    from langfuse.langchain import CallbackHandler as LangfuseCallbackHandler
+    
+    Langfuse(
+        public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
+        secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
+        base_url=os.getenv("LANGFUSE_BASE_URL"),
+    )
+    langfuse_handler = LangfuseCallbackHandler()
+    print("Langfuse connected")
+except Exception as e:
+    langfuse_handler = None
+    print(f"Langfuse setup skipped: {e}")
 
 class EcobotRAG:
     def __init__(self, data_path="data/", vector_db_path="vectorstore/faiss_index"):
@@ -81,53 +110,35 @@ class EcobotRAG:
     def setup_qa_chain(self, force_ollama=False):
         print("Setting up QA chain...")
         
-        groq_api_key = os.getenv("GROQ_API_KEY")
+        gemini_api_key = os.getenv("GEMINI_API_KEY")
         
-        if groq_api_key and not force_ollama:
+        if gemini_api_key:
             try:
-                print("Attempting to connect to GROQ...")
-                from langchain_groq import ChatGroq
+                print("Attempting to connect to Gemini...")
+                from langchain_google_genai import ChatGoogleGenerativeAI
                 
-                self.llm = ChatGroq(
-                    model="llama-3.3-70b-versatile",
+                self.llm = ChatGoogleGenerativeAI(
+                    model="gemini-2.5-flash",
+                    google_api_key=gemini_api_key,
                     temperature=0.7,
-                    max_tokens=512,
-                    groq_api_key=groq_api_key,
-                    timeout=10
                 )
                 
                 test_msg = self.llm.invoke("Hi")
-                print("GROQ connected successfully")
+                print("Gemini connected successfully")
                 
             except Exception as e:
-                print(f"GROQ connection failed: {str(e)[:100]}")
-                print("Switching to local Ollama backup...")
+                print(f"Gemini failed: {str(e)[:100]}")
                 self.llm = None
-        else:
-            print("No GROQ API key found or forced Ollama mode")
-            self.llm = None
         
         if self.llm is None:
-            try:
-                print("Connecting to local Ollama...")
-                from langchain_ollama import ChatOllama
-                
-                self.llm = ChatOllama(
-                    model="llama3.2:3b",
-                    temperature=0.7
-                )
-                print("Ollama connected successfully - Backup mode active")
-                
-            except Exception as e:
-                print(f"Ollama also failed: {str(e)}")
-                print("Make sure Ollama is running")
-                return None
+            print("No working LLM found!")
+            return None
         
         self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": 5})
         
         print("QA chain ready")
         return True
-    
+
     def query(self, question):
         if self.llm is None:
             raise ValueError("QA chain not setup! Run setup_qa_chain() first.")
@@ -157,9 +168,15 @@ Answer:"""
         
         response = self.llm.invoke(prompt)
         
+        try:
+            if langfuse_handler is not None:
+                langfuse_handler.on_llm_end(response)
+        except:
+            pass
+        
         return {'result': response.content}
     
-    def chat(self):
+def chat(self):
         print("\n" + "="*70)
         print("ECOBOT - PLANT CARE ASSISTANT")
         print("="*70)

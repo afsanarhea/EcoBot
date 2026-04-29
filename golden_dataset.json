@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "question": "What are the symptoms of overwatering in aloe vera?",
+    "expected_keywords": ["soft", "mushy", "brown", "smell", "root"],
+    "expected_answer": "Soft, mushy, see-through leaves. Brown/black base. Bad smell. Rotten roots.",
+    "category": "Factual Retrieval",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Overwatering Damage > Symptoms"
+  },
+  {
+    "id": 2,
+    "question": "What are the symptoms of overwatering in snake plant?",
+    "expected_keywords": ["soft", "mushy", "yellow", "smell", "root"],
+    "expected_answer": "Leaves feel soft and mushy. Yellow or brown leaves. Bad smell from soil. Roots look black and slimy.",
+    "category": "Factual Retrieval",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > Overwatering Damage > Symptoms"
+  },
+  {
+    "id": 3,
+    "question": "What causes brown leaf tips in spider plant?",
+    "expected_keywords": ["water", "humid", "fertiliz"],
+    "expected_answer": "Tap water chemicals, low humidity, too much fertilizer.",
+    "category": "Factual Retrieval",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Brown Leaf Tips > Causes"
+  },
+  {
+    "id": 4,
+    "question": "What is the ideal temperature range for a greenhouse?",
+    "expected_keywords": ["18", "26"],
+    "expected_answer": "Keep temperature between 18C and 26C.",
+    "category": "Factual Retrieval",
+    "plant": "Greenhouse",
+    "kb_source": "Greenhouse > Prevention Tips"
+  },
+  {
+    "id": 5,
+    "question": "What pests commonly affect spider plants?",
+    "expected_keywords": ["mite", "aphid", "mealybug"],
+    "expected_answer": "Spider mites, aphids, mealybugs, scale.",
+    "category": "Factual Retrieval",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Pest Damage > Common pests"
+  },
+  {
+    "id": 6,
+    "question": "What does aloe rust look like?",
+    "expected_keywords": ["brown", "black", "spot"],
+    "expected_answer": "Brown/black round spots that may spread.",
+    "category": "Factual Retrieval",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Fungal Infections > Aloe Rust"
+  },
+  {
+    "id": 7,
+    "question": "My aloe vera leaves are thin and wrinkled, what is wrong?",
+    "expected_keywords": ["underwat", "thin", "wrinkl", "dry"],
+    "expected_answer": "Underwatering damage. Thin wrinkled leaves, leaves curl inward, dry brown tips.",
+    "category": "Problem Diagnosis",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Underwatering Damage"
+  },
+  {
+    "id": 8,
+    "question": "My spider plant leaves are turning yellow, what should I do?",
+    "expected_keywords": ["light", "nutrient", "water", "indirect", "fertiliz"],
+    "expected_answer": "Too much sun, not enough nutrients, or overwatering. Move to bright indirect light, water when soil dry, fertilize monthly.",
+    "category": "Problem Diagnosis",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Yellow or Pale Leaves"
+  },
+  {
+    "id": 9,
+    "question": "My snake plant has white powder-like coating on leaves, what is it?",
+    "expected_keywords": ["fungal", "neem", "remov", "air"],
+    "expected_answer": "Fungal infection. Remove infected leaves, spray with neem oil, keep air moving, avoid pouring water on leaves.",
+    "category": "Problem Diagnosis",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > Fungal Infections"
+  },
+  {
+    "id": 10,
+    "question": "I see sticky residue and fine webbing on my spider plant, what is happening?",
+    "expected_keywords": ["pest", "mite", "neem", "rinse"],
+    "expected_answer": "Pest damage - likely spider mites. Rinse plant with water, apply neem oil weekly, use insecticidal soap, isolate.",
+    "category": "Problem Diagnosis",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Pest Damage"
+  },
+  {
+    "id": 11,
+    "question": "My aloe vera leaves suddenly collapsed and smell wet, what happened?",
+    "expected_keywords": ["rot", "bacteria", "collaps", "remov"],
+    "expected_answer": "Soft rot (bacterial infection). Sudden leaf collapse, wet smelly patches. Remove infected parts immediately.",
+    "category": "Problem Diagnosis",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Soft Rot (Bacterial)"
+  },
+  {
+    "id": 12,
+    "question": "My snake plant leaves are torn and cracked, what should I do?",
+    "expected_keywords": ["trim", "scissor", "clean", "humid"],
+    "expected_answer": "Physical damage. Trim damaged parts with clean scissors. Keep humidity around 30-50%.",
+    "category": "Problem Diagnosis",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > Physical Damage"
+  },
+  {
+    "id": 13,
+    "question": "How to treat fungal infection in aloe vera?",
+    "expected_keywords": ["remov", "fungicid", "humid", "airflow"],
+    "expected_answer": "Remove affected leaves. Apply sulfur-based fungicide. Lower humidity. Increase airflow.",
+    "category": "Solution/Treatment",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Aloe Rust Solutions"
+  },
+  {
+    "id": 14,
+    "question": "How to fix overwatering damage in snake plant?",
+    "expected_keywords": ["root", "scissor", "dry", "repot", "drain"],
+    "expected_answer": "Cut rotten roots with clean scissors. Let dry. Repot in fast-draining soil. Water every 2-3 weeks.",
+    "category": "Solution/Treatment",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > Overwatering Damage > Solutions"
+  },
+  {
+    "id": 15,
+    "question": "How to fix brown leaf tips on spider plant?",
+    "expected_keywords": ["filter", "humid", "fertiliz", "trim"],
+    "expected_answer": "Use filtered or stored tap water. Raise humidity to 40-60%. Reduce fertilizer use. Trim brown tips.",
+    "category": "Solution/Treatment",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Brown Leaf Tips > Solutions"
+  },
+  {
+    "id": 16,
+    "question": "How to treat pest damage on spider plant?",
+    "expected_keywords": ["rinse", "neem", "soap", "isolat"],
+    "expected_answer": "Rinse with water. Apply neem oil weekly. Use insecticidal soap. Keep plant isolated.",
+    "category": "Solution/Treatment",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Pest Damage > Solutions"
+  },
+  {
+    "id": 17,
+    "question": "What should I do if my aloe vera is sunburned?",
+    "expected_keywords": ["indirect", "shade", "trim", "light"],
+    "expected_answer": "Move to bright indirect sunlight. Shade during hot hours. Trim burnt parts if needed.",
+    "category": "Solution/Treatment",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Sunburn or Light Damage > Solutions"
+  },
+  {
+    "id": 18,
+    "question": "How to treat leaf spot disease in spider plant?",
+    "expected_keywords": ["remov", "copper", "fungicid", "airflow"],
+    "expected_answer": "Remove affected leaves. Use copper fungicide. Increase airflow. Avoid wetting leaves.",
+    "category": "Solution/Treatment",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Leaf Spot Disease > Solutions"
+  },
+  {
+    "id": 19,
+    "question": "How to prevent aloe vera damage?",
+    "expected_keywords": ["drain", "indirect", "humid", "cold"],
+    "expected_answer": "Use fast-draining soil. Water every 3-4 weeks. Bright indirect sunlight. Low humidity. Keep above 13C.",
+    "category": "Prevention",
+    "plant": "Aloe Vera",
+    "kb_source": "Aloe Vera > Prevention Tips"
+  },
+  {
+    "id": 20,
+    "question": "How to prevent snake plant damage?",
+    "expected_keywords": ["dry", "drain", "humid", "cold", "clean"],
+    "expected_answer": "Water only when soil fully dry. Use pot with drainage holes. Humidity 30-50%. Avoid cold. Clean leaves.",
+    "category": "Prevention",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > Prevention Tips"
+  },
+  {
+    "id": 21,
+    "question": "How to prevent spider plant problems?",
+    "expected_keywords": ["moist", "light", "repot", "clean", "air"],
+    "expected_answer": "Keep soil slightly moist. Avoid strong sunlight. Repot every 2-3 years. Clean dust. Keep air flowing.",
+    "category": "Prevention",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > Prevention Tips"
+  },
+  {
+    "id": 22,
+    "question": "How to prevent plant damage in a greenhouse?",
+    "expected_keywords": ["inspect", "steriliz", "quarantin", "temperatur"],
+    "expected_answer": "Inspect all plants weekly. Sterilize tools. Quarantine new plants for 1-2 weeks. Temperature 18-26C.",
+    "category": "Prevention",
+    "plant": "Greenhouse",
+    "kb_source": "Greenhouse > Prevention Tips"
+  },
+  {
+    "id": 23,
+    "question": "What should I do if my greenhouse has humidity problems?",
+    "expected_keywords": ["fan", "vent", "space", "dehumid"],
+    "expected_answer": "Use fans. Open vents or windows. Keep plants spaced apart. Use dehumidifier.",
+    "category": "Prevention",
+    "plant": "Greenhouse",
+    "kb_source": "Greenhouse > Solutions for Problems"
+  },
+  {
+    "id": 24,
+    "question": "My plant is dead, what should I do now?",
+    "expected_keywords": ["remov", "soil", "clean", "nearby"],
+    "expected_answer": "Remove plant completely. Dispose soil. Clean pot. Check nearby plants. Adjust watering.",
+    "category": "Complex Scenario",
+    "plant": "General",
+    "kb_source": "Greenhouse > What to Do When a Plant Dies"
+  },
+  {
+    "id": 25,
+    "question": "My snake plant is dead, what should I do?",
+    "expected_keywords": ["remov", "soil", "clean", "nearby", "water"],
+    "expected_answer": "Remove plant. Throw away soil. Clean pot with hot water. Check nearby plants for rot.",
+    "category": "Complex Scenario",
+    "plant": "Snake Plant",
+    "kb_source": "Snake Plant > What to Do If Dead"
+  },
+  {
+    "id": 26,
+    "question": "My spider plant is dead but I see small baby plants, can I save them?",
+    "expected_keywords": ["baby", "save", "remov", "soil", "steriliz"],
+    "expected_answer": "Remove plant. Check if baby plants can be saved. Throw away soil. Sterilize pot.",
+    "category": "Complex Scenario",
+    "plant": "Spider Plant",
+    "kb_source": "Spider Plant > What to Do If Dead"
+  },
+  {
+    "id": 27,
+    "question": "Multiple plants are dying in my greenhouse, what should I do?",
+    "expected_keywords": ["remov", "clean", "adjust", "inspect"],
+    "expected_answer": "Remove dead plants. Clean pots. Adjust watering or humidity. Inspect all plants.",
+    "category": "Complex Scenario",
+    "plant": "Greenhouse",
+    "kb_source": "Greenhouse > What to Do When a Plant Dies"
+  },
+  {
+    "id": 28,
+    "question": "How do I take care of a mango tree?",
+    "expected_keywords": ["speciali", "information", "knowledge"],
+    "expected_answer": "Should refuse - mango not in knowledge base. Bot specializes in Snake Plants, Spider Plants, and Aloe Vera.",
+    "category": "Edge Case",
+    "plant": "Out of Scope",
+    "kb_source": "N/A - Out of domain test"
+  },
+  {
+    "id": 29,
+    "question": "What is the capital of France?",
+    "expected_keywords": ["speciali", "plant", "information"],
+    "expected_answer": "Should refuse - not plant related.",
+    "category": "Edge Case",
+    "plant": "Out of Scope",
+    "kb_source": "N/A - Off-topic test"
+  },
+  {
+    "id": 30,
+    "question": "Can I eat my aloe vera plant?",
+    "expected_keywords": ["speciali", "information", "knowledge"],
+    "expected_answer": "Should refuse - eating info not in knowledge base.",
+    "category": "Edge Case",
+    "plant": "Out of Scope",
+    "kb_source": "N/A - Out of domain test"
+  },
+  {
+    "id": 31,
+    "question": "Tell me about rose plant care",
+    "expected_keywords": ["speciali", "information", "knowledge"],
+    "expected_answer": "Should refuse - rose not in knowledge base.",
+    "category": "Edge Case",
+    "plant": "Out of Scope",
+    "kb_source": "N/A - Out of domain test"
+  },
+  {
+    "id": 32,
+    "question": "What are the common causes of plant damage in greenhouse?",
+    "expected_keywords": ["humid", "airflow", "overwat", "sunlight", "temperatur", "pest"],
+    "expected_answer": "High humidity, poor airflow, overwatering, not enough sunlight, temperature issues, pests, fungal growth.",
+    "category": "Factual Retrieval",
+    "plant": "Greenhouse",
+    "kb_source": "Greenhouse > Common Causes of Plant Damage"
+  }
+]

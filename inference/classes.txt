@@ -1,0 +1,6 @@
+Aloe_Dead
+Aloe_Healthy
+Snake_Plant_Dead
+Snake_Plant_Healthy
+Spider_Plant_Dead
+Spider_Plant_Healthy

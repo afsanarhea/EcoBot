@@ -1,0 +1,60 @@
+description: "EcoBot Phase A"
+
+providers:
+  - id: python:ecobot_provider.py
+
+defaultTest:
+  options:
+    provider: python:ecobot_provider.py
+
+prompts:
+  - "{{question}}"
+
+tests:
+  - vars:
+      question: "What are the symptoms of overwatering in aloe vera?"
+    assert:
+      - type: icontains
+        value: "soft"
+      - type: icontains
+        value: "mushy"
+      - type: icontains
+        value: "root"
+
+  - vars:
+      question: "My spider plant leaves are turning yellow, what should I do?"
+    assert:
+      - type: icontains
+        value: "light"
+      - type: icontains
+        value: "nutrient"
+      - type: icontains
+        value: "water"
+
+  - vars:
+      question: "How to fix overwatering damage in snake plant?"
+    assert:
+      - type: icontains
+        value: "root"
+      - type: icontains
+        value: "scissor"
+      - type: icontains
+        value: "drain"
+
+  - vars:
+      question: "How to prevent snake plant damage?"
+    assert:
+      - type: icontains
+        value: "dry"
+      - type: icontains
+        value: "drain"
+      - type: icontains
+        value: "cold"
+
+  - vars:
+      question: "How do I take care of a mango tree?"
+    assert:
+      - type: icontains
+        value: "speciali"
+      - type: not-icontains
+        value: "water your mango"
