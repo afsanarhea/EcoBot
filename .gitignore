@@ -25,3 +25,15 @@ results_*.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Other projects
+inference/
+ecobot_shared/
+chatbot_core.py
+demo_app.py
+integrated_app.py
+main_app.py
+ecobot.code-workspace
+.deepeval/
+*.mp4
+*.pt
